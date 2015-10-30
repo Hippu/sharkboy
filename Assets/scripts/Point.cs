@@ -22,7 +22,15 @@ public class Point : MonoBehaviour {
         Debug.Log("Triggered with " + other.tag);
         if (other.tag == "Player") {
             counter.addPoint();
-            Destroy(this.gameObject);
+            this.GetComponent<AudioSource>().Play();
+            this.Disable();
+           // Destroy(this.gameObject);
         }
+    }
+
+    void Disable()
+    {
+        this.GetComponent<SpriteRenderer>().enabled = false;
+        this.GetComponent<BoxCollider2D>().enabled = false;
     }
 }
