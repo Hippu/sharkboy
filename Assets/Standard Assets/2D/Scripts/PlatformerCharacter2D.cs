@@ -20,6 +20,7 @@ namespace UnityStandardAssets._2D
         private Rigidbody2D m_Rigidbody2D;
         private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 
+
         private void Awake()
         {
             // Setting up references.
@@ -47,6 +48,18 @@ namespace UnityStandardAssets._2D
             // Set the vertical animation
             m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
         }
+
+
+		void OnTriggerEnter2D (Collider2D other) 
+		{
+			Debug.Log("T123 " + other.tag);
+			if (other.tag == "point")
+			{
+				GetComponent<AudioSource>().Play();
+				Destroy(other.gameObject);
+			}
+		}
+
 
 
         public void Move(float move, bool crouch, bool jump)
