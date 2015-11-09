@@ -6,8 +6,7 @@ public class SizeChanger : MonoBehaviour
     private int currentSize = 1;
     public int maxSize;
     public float growingSpeed;
-    public float growthFactor;
-    private int targetSize;
+    public float growthFactor = 1.0f;
     private Vector3 originalSize;
     private enum State
     {
@@ -20,7 +19,6 @@ public class SizeChanger : MonoBehaviour
 
     void Start()
     {
-        targetSize = currentSize;
         originalSize = new Vector3(
             Mathf.Abs(this.transform.localScale.x),
             Mathf.Abs(this.transform.localScale.y)
@@ -39,9 +37,9 @@ public class SizeChanger : MonoBehaviour
         }
     }
 
-    void Grow()
+    private void Grow()
     {
-        if (Mathf.Abs(transform.localScale.x) < targetSize * growthFactor * originalSize.x)
+        if (Mathf.Abs(transform.localScale.x) < growthFactor * originalSize.x)
         {
             if (transform.localScale.x > 0.0f)
             {
@@ -58,9 +56,9 @@ public class SizeChanger : MonoBehaviour
         }
     }
 
-    void Shrink()
+    private void Shrink()
     {
-        if (Mathf.Abs(transform.localScale.x) > targetSize * growthFactor * originalSize.x)
+        if (Mathf.Abs(transform.localScale.x) > growthFactor * originalSize.x)
         {
             if (transform.localScale.x > 0.0f)
             {
@@ -77,9 +75,9 @@ public class SizeChanger : MonoBehaviour
         }
     }
 
-    public void setTargetSize(int value)
+    public void setGrowthFactor(float value)
     {
-        targetSize = value;
+        growthFactor = value;
         if (value > currentSize)
         {
             currentState = State.Growing;
