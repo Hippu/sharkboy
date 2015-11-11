@@ -3,8 +3,6 @@ using System.Collections;
 
 public class SizeChanger : MonoBehaviour
 {
-    private int currentSize = 1;
-    public int maxSize;
     public float growingSpeed;
     public float growthFactor = 1.0f;
     private Vector3 originalSize;
@@ -77,13 +75,13 @@ public class SizeChanger : MonoBehaviour
 
     public void setGrowthFactor(float value)
     {
-        growthFactor = value;
-        if (value > currentSize)
+        if (value > growthFactor)
         {
             currentState = State.Growing;
         } else {
             currentState = State.Shrinking;
         }
+        growthFactor = value;
     }
 
 
