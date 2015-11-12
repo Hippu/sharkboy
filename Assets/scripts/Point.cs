@@ -11,6 +11,7 @@ public class Point : MonoBehaviour {
         Debug.Log(counter);
         Debug.Log("Point created with counter", this.counter);
 	}
+
 	
 	// Update is called once per frame
 	void Update () {
@@ -31,6 +32,6 @@ public class Point : MonoBehaviour {
     void Disable()
     {
         this.GetComponent<SpriteRenderer>().enabled = false;
-        this.GetComponent<BoxCollider2D>().enabled = false;
+        this.GetComponent<Collider2D>().enabled = false;
     }
 }
