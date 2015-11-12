@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class shark : MonoBehaviour
+public class Shark : MonoBehaviour
 {
     private Rigidbody2D rb;
 
