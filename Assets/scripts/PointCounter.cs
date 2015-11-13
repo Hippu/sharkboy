@@ -11,7 +11,7 @@ public class PointCounter : MonoBehaviour {
     {
         this.points += 1;
         Debug.Log("Point added");
-        uiString.text = "Points: " + this.points;
+        uiString.text = "X " + this.points;
     }
 
     public int getPoints()

@@ -134,8 +134,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 362096175}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .389999986, y: .189999998, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: .0399999991, y: 0, z: 0}
+  m_LocalScale: {x: .620000005, y: .620000005, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -164,21 +164,21 @@ AudioListener:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1007722631}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!124 &1007722633
 Behaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1007722631}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!92 &1007722634
 Behaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1007722631}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &1007722635
 Camera:
   m_ObjectHideFlags: 0
@@ -209,7 +209,7 @@ Camera:
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 0
-  m_OcclusionCulling: 1
+  m_OcclusionCulling: 0
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
   m_StereoMirrorMode: 0
@@ -234,8 +234,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 2147417747}
   - 212: {fileID: 2147417746}
-  - 114: {fileID: 2147417745}
   - 61: {fileID: 2147417748}
+  - 114: {fileID: 2147417749}
+  - 114: {fileID: 2147417745}
   m_Layer: 0
   m_Name: start
   m_TagString: Untagged
@@ -251,7 +252,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2147417744}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3019f4604d8e94e46b440805f57b6e9e, type: 3}
+  m_Script: {fileID: 11500000, guid: 2fe924b540dc2b244964b8aeb722770c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &2147417746
@@ -287,7 +288,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2147417744}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.14999962, y: -3.26999998, z: 0}
+  m_LocalPosition: {x: 6.23999977, y: -3.3900001, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -305,3 +306,14 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 4.16666651, y: 1.35833335}
+--- !u!114 &2147417749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2147417744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fe924b540dc2b244964b8aeb722770c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
