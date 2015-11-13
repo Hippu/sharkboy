@@ -5,6 +5,7 @@ public class SizeChanger : MonoBehaviour
 {
     public float growingSpeed;
     public float growthFactor = 1.0f;
+    public float incrementAmount;
     private Vector3 originalSize;
     private enum State
     {
@@ -82,6 +83,16 @@ public class SizeChanger : MonoBehaviour
             currentState = State.Shrinking;
         }
         growthFactor = value;
+    }
+
+    public void Increment()
+    {
+        setGrowthFactor(growthFactor + incrementAmount);
+    }
+
+    public void Decrement()
+    {
+        setGrowthFactor(growthFactor - incrementAmount);
     }
 
 

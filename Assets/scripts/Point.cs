@@ -25,7 +25,7 @@ public class Point : MonoBehaviour {
             counter.addPoint();
             this.GetComponent<AudioSource>().Play();
             this.Disable();
-           // Destroy(this.gameObject);
+            other.GetComponent<SizeChanger>().Increment();
         }
     }
 
