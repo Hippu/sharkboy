@@ -71,6 +71,11 @@ public class Shark : MonoBehaviour
         Vector3 flipped = transform.localScale;
         flipped.x = flipped.x * -1;
         transform.localScale = flipped;
+
+
+        Vector3 cameraFlipped = Camera.main.transform.localScale;
+        cameraFlipped.x = cameraFlipped.x * -1;
+        Camera.main.transform.localScale = cameraFlipped;
     }
 
 

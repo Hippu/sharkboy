@@ -1,16 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class intro : MonoBehaviour {
+public class Intro : MonoBehaviour
+{
 
 
-    void Start () {
+    void Start()
+    {
 
     }
-	
-	void Update () {
-	
-	}
+
+    void Update()
+    {
+
+    }
 
     void OnMouseDown()
     {
