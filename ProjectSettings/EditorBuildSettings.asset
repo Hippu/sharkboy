@@ -11,17 +11,19 @@ EditorBuildSettings:
     path: Assets/Scenes/Start.unity
   - enabled: 0
     path: Assets/Scenes/Start.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Start.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/testLevel.unity
   - enabled: 0
     path: Assets/_Scenes/Start.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/_Scenes/TestLevel.unity
   - enabled: 0
     path: Assets/_Scenes/Lose.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Intro.unity
   - enabled: 1
     path: Assets/Scenes/TestLevel2.unity
+  - enabled: 1
+    path: Assets/Scenes/Lose.unity
