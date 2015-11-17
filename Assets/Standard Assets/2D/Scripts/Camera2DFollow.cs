@@ -6,10 +6,10 @@ namespace UnityStandardAssets._2D
     public class Camera2DFollow : MonoBehaviour
     {
         public Transform target;
-        public float damping = 0;
-        public float lookAheadFactor = -1;
-        public float lookAheadReturnSpeed = 8f;
-        public float lookAheadMoveThreshold = 0.3f;
+        public float damping = 1;
+        public float lookAheadFactor = 3;
+        public float lookAheadReturnSpeed = 0.5f;
+        public float lookAheadMoveThreshold = 0.1f;
 
         private float m_OffsetZ;
         private Vector3 m_LastTargetPosition;
@@ -21,10 +21,10 @@ namespace UnityStandardAssets._2D
         {
             m_LastTargetPosition = target.position;
             m_OffsetZ = (transform.position - target.position).z;
-            //transform.parent = null;
+            transform.parent = null;
         }
 
-        
+
         // Update is called once per frame
         private void Update()
         {
@@ -39,18 +39,15 @@ namespace UnityStandardAssets._2D
             }
             else
             {
-                Vector3 sharkpos = new Vector3(4, 4.5f, 0);
-                m_LookAheadPos = Vector3.MoveTowards(m_LookAheadPos, sharkpos, Time.deltaTime*lookAheadReturnSpeed);
+                m_LookAheadPos = Vector3.MoveTowards(m_LookAheadPos, Vector3.zero, Time.deltaTime*lookAheadReturnSpeed);
             }
 
             Vector3 aheadTargetPos = target.position + m_LookAheadPos + Vector3.forward*m_OffsetZ;
-            //Vector3 aheadTargetPos = target.position;
             Vector3 newPos = Vector3.SmoothDamp(transform.position, aheadTargetPos, ref m_CurrentVelocity, damping);
 
             transform.position = newPos;
 
             m_LastTargetPosition = target.position;
         }
-        
     }
 }
