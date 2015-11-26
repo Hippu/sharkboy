@@ -23,7 +23,7 @@ public class Shark : MonoBehaviour
 
         if ((Input.GetKeyDown("up")) && (animator.GetBool("grounded")))
         {
-            rb.velocity = new Vector2(rb.velocity.x, maxSpeedV);
+            rb.velocity = new Vector2(rb.velocity.x, 10f);
             animator.SetBool("grounded", false);
         }
         if (Input.GetKey("right"))
