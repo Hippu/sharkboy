@@ -26,7 +26,7 @@ public class Shark : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, maxSpeedV);
             animator.SetBool("grounded", false);
         }
-        if (Input.GetKey("right"))
+        if (Input.GetAxis("Horizontal") > 0)
         {
             if (!facingRight)
             {
@@ -35,14 +35,14 @@ public class Shark : MonoBehaviour
             rb.velocity = new Vector2(maxSpeedV, rb.velocity.y);
 
         }
-        if (Input.GetKey("left"))
+        if (Input.GetAxis("Horizontal") < 0)
         {
             if (facingRight) { Flip(); }
             rb.velocity = new Vector2(-maxSpeedV, rb.velocity.y);
 
         }
 
-        if ((Input.GetKey(KeyCode.RightShift) || Input.GetKey(KeyCode.LeftShift)) && Input.GetKeyDown("up"))
+        if (Input.GetAxis("Jump") > 0)
         {
 
             rb.velocity = new Vector2(rb.velocity.x, maxSpeedV * 2);
