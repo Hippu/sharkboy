@@ -9,6 +9,7 @@ public class Shark : MonoBehaviour
 
     public float maxSpeedV = 5f;
     private bool facingRight = true;
+    public int jumpTokens = 2;
 
 
     void Start()
@@ -21,11 +22,6 @@ public class Shark : MonoBehaviour
     void Update()
     {
 
-        if ((Input.GetKeyDown("up")) && (animator.GetBool("grounded")))
-        {
-            rb.velocity = new Vector2(rb.velocity.x, maxSpeedV);
-            animator.SetBool("grounded", false);
-        }
         if (Input.GetAxis("Horizontal") > 0)
         {
             if (!facingRight)
@@ -42,9 +38,9 @@ public class Shark : MonoBehaviour
 
         }
 
-        if (Input.GetAxis("Jump") > 0)
+        if (Input.GetButtonDown("Jump") && jumpTokens > 0)
         {
-
+            jumpTokens += -1;
             rb.velocity = new Vector2(rb.velocity.x, maxSpeedV * 2);
             animator.SetBool("grounded", false);
         }
@@ -93,6 +89,7 @@ public class Shark : MonoBehaviour
         if (col.gameObject.tag == "sand")
         {
             animator.SetBool("grounded", true);
+            jumpTokens = 2;
         }
     }
 
