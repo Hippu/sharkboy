@@ -54,7 +54,7 @@ public class Shark : MonoBehaviour
 
 
         GameObject redplants = GameObject.Find("Back_Plants");
-        float sx = rb.transform.position.x / 6;
+        float sx = Camera.main.transform.position.x / 8;
         Vector3 vec = new Vector3(sx, 0, 0);
         redplants.transform.position = vec;
 
