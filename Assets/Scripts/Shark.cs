@@ -24,7 +24,6 @@ public class Shark : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         if ((Input.GetAxis("Horizontal") > 0.1f || Input.GetAxis("Horizontal") < -0.1f) && state != states.Diving)
         {
             if ((facingRight && Input.GetAxis("Horizontal") < 0) ||
