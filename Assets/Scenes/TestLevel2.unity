@@ -3073,7 +3073,7 @@ Transform:
   - {fileID: 772788925}
   - {fileID: 1099851594}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!4 &1078500873 stripped
 Transform:
   m_PrefabParentObject: {fileID: 403496, guid: 4a798bb9c0c9fc241a0218a6038d6381, type: 2}
@@ -5692,6 +5692,10 @@ Prefab:
     - target: {fileID: 482922, guid: 97c8dcf303b1e8543a7957080b058783, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11482460, guid: 97c8dcf303b1e8543a7957080b058783, type: 2}
+      propertyPath: lookAheadFactor
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 97c8dcf303b1e8543a7957080b058783, type: 2}

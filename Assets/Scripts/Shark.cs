@@ -25,20 +25,13 @@ public class Shark : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetAxis("Horizontal") > 0.1f && state != states.Diving)
+        if ((Input.GetAxis("Horizontal") > 0.1f || Input.GetAxis("Horizontal") < -0.1f) && state != states.Diving)
         {
-            if (!facingRight)
-            {
-                Flip();
-            }
-            rb.velocity = new Vector2(maxSpeedV, rb.velocity.y);
+            if ((facingRight && Input.GetAxis("Horizontal") < 0) ||
+                (!facingRight && Input.GetAxis("Horizontal") > 0))
+            { Flip(); }
 
-        }
-        if (Input.GetAxis("Horizontal") < -0.1f && state != states.Diving)
-        {
-            if (facingRight) { Flip(); }
-            rb.velocity = new Vector2(-maxSpeedV, rb.velocity.y);
-
+            rb.velocity = new Vector2(Input.GetAxis("Horizontal") * maxSpeedV, rb.velocity.y);
         }
 
         if (Input.GetButtonDown("Jump") && jumpTokens > 0)
@@ -79,7 +72,7 @@ public class Shark : MonoBehaviour
     private void changeState(states newState)
     {
         state = newState;
-        
+
         switch (newState)
         {
             case states.Jumping:
