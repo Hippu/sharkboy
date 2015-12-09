@@ -9,6 +9,9 @@ public class Shark : MonoBehaviour
 
     public float maxSpeedV = 5f;
     private bool facingRight = true;
+    public int jumpTokens = 2;
+    public enum states { Walking, Idle, Jumping, Diving }
+    public states state;
 
 
     void Start()
@@ -17,48 +20,94 @@ public class Shark : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
+
     // Update is called once per frame
     void Update()
     {
 
-        if ((Input.GetKeyDown("up")) && (animator.GetBool("grounded")))
+        if ((Input.GetAxis("Horizontal") > 0.1f || Input.GetAxis("Horizontal") < -0.1f) && state != states.Diving)
         {
-            rb.velocity = new Vector2(rb.velocity.x, maxSpeedV);
-            animator.SetBool("grounded", false);
-        }
-        if (Input.GetKey("right"))
-        {
-            if (!facingRight)
-            {
-                Flip();
-            }
-            rb.velocity = new Vector2(maxSpeedV, rb.velocity.y);
+            if ((facingRight && Input.GetAxis("Horizontal") < 0) ||
+                (!facingRight && Input.GetAxis("Horizontal") > 0))
+            { Flip(); }
 
-        }
-        if (Input.GetKey("left"))
-        {
-            if (facingRight) { Flip(); }
-            rb.velocity = new Vector2(-maxSpeedV, rb.velocity.y);
-
+            rb.velocity = new Vector2(Input.GetAxis("Horizontal") * maxSpeedV, rb.velocity.y);
         }
 
-        if ((Input.GetKey(KeyCode.RightShift) || Input.GetKey(KeyCode.LeftShift)) && Input.GetKeyDown("up"))
+        if (Input.GetButtonDown("Jump") && jumpTokens > 0)
         {
+            changeState(states.Jumping);
+        }
 
-            rb.velocity = new Vector2(rb.velocity.x, maxSpeedV * 2);
-            animator.SetBool("grounded", false);
+        if (Input.GetButtonDown("Dive") && state == states.Jumping)
+        {
+            changeState(states.Diving);
         }
 
 
-        if ((rb.velocity.x <= 0.1) && (rb.velocity.x >= -0.1)) { animator.SetBool("walking", false); } else { animator.SetBool("walking", true); }
+        if ((rb.velocity.x <= 0.1) && (rb.velocity.x >= -0.1) && state != states.Jumping && state != states.Diving)
+        { changeState(states.Idle); }
+        else if (state != states.Jumping && state != states.Diving)
+        {
+            changeState(states.Walking);
+        }
 
+        if (state == states.Walking && rb.velocity.x < 2 && rb.velocity.x > -2)
+        {
+            animator.speed = Mathf.Abs(rb.velocity.x) / 2;
+        }
+        else
+        {
+            animator.speed = 1;
+        }
 
         GameObject redplants = GameObject.Find("Back_Plants");
-        float sx = rb.transform.position.x / 6;
+        float sx = Camera.main.transform.position.x / 8;
         Vector3 vec = new Vector3(sx, 0, 0);
         redplants.transform.position = vec;
 
 
+    }
+
+    private void changeState(states newState)
+    {
+        state = newState;
+
+        switch (newState)
+        {
+            case states.Jumping:
+                jumpTokens += -1;
+                rb.velocity = new Vector2(rb.velocity.x, maxSpeedV * 2);
+                animator.SetBool("grounded", false);
+                break;
+            case states.Idle:
+                rb.rotation = 0.0f;
+                animator.SetBool("walking", false);
+                animator.SetBool("grounded", true);
+                jumpTokens = 2;
+                break;
+            case states.Walking:
+                rb.rotation = 0.0f;
+                animator.SetBool("walking", true);
+                break;
+            case states.Diving:
+                jumpTokens = 0;
+                animator.SetBool("grounded", false);
+                if (facingRight)
+                {
+                    rb.velocity = new Vector2(maxSpeedV * 2, rb.velocity.y);
+                    rb.rotation = -90.0f;
+                }
+                else
+                {
+                    rb.velocity = new Vector2(-maxSpeedV * 2, rb.velocity.y);
+                    rb.rotation = 90.0f;
+                }
+                break;
+            default:
+                break;
+
+        }
     }
 
     /// <summary>
@@ -92,7 +141,7 @@ public class Shark : MonoBehaviour
         }
         if (col.gameObject.tag == "sand")
         {
-            animator.SetBool("grounded", true);
+            changeState(states.Idle);
         }
     }
 
