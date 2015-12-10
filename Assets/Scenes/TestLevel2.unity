@@ -1173,48 +1173,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f76b7602f07624846b9a0ba59321a3cd, type: 2}
   m_IsPrefabParent: 0
---- !u!1001 &402404405
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 476132, guid: bda1554a8728c47bc9b5c628e6ee9d54, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -7.28000021
-      objectReference: {fileID: 0}
-    - target: {fileID: 476132, guid: bda1554a8728c47bc9b5c628e6ee9d54, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -1.84000003
-      objectReference: {fileID: 0}
-    - target: {fileID: 476132, guid: bda1554a8728c47bc9b5c628e6ee9d54, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 476132, guid: bda1554a8728c47bc9b5c628e6ee9d54, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 476132, guid: bda1554a8728c47bc9b5c628e6ee9d54, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 476132, guid: bda1554a8728c47bc9b5c628e6ee9d54, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 476132, guid: bda1554a8728c47bc9b5c628e6ee9d54, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 476132, guid: bda1554a8728c47bc9b5c628e6ee9d54, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: bda1554a8728c47bc9b5c628e6ee9d54, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &410007079
 GameObject:
   m_ObjectHideFlags: 0
@@ -2076,6 +2034,48 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d9a846b0ea792994581db3c7db58d504, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1001 &704666041
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 476132, guid: bda1554a8728c47bc9b5c628e6ee9d54, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -5.197299
+      objectReference: {fileID: 0}
+    - target: {fileID: 476132, guid: bda1554a8728c47bc9b5c628e6ee9d54, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.16644502
+      objectReference: {fileID: 0}
+    - target: {fileID: 476132, guid: bda1554a8728c47bc9b5c628e6ee9d54, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 476132, guid: bda1554a8728c47bc9b5c628e6ee9d54, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 476132, guid: bda1554a8728c47bc9b5c628e6ee9d54, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 476132, guid: bda1554a8728c47bc9b5c628e6ee9d54, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 476132, guid: bda1554a8728c47bc9b5c628e6ee9d54, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 476132, guid: bda1554a8728c47bc9b5c628e6ee9d54, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: bda1554a8728c47bc9b5c628e6ee9d54, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &711815872
 Prefab:
   m_ObjectHideFlags: 0
@@ -3186,7 +3186,7 @@ Transform:
   - {fileID: 772788925}
   - {fileID: 1099851594}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
 --- !u!4 &1078500873 stripped
 Transform:
   m_PrefabParentObject: {fileID: 403496, guid: 4a798bb9c0c9fc241a0218a6038d6381, type: 2}

@@ -27,7 +27,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 141326}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.98000002, y: -.100000001, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sprites:
   - {fileID: 21300006, guid: 963d42cf3f278474f9454cab96825a32, type: 3}
-  Ins: {fileID: 165584, guid: fe7bd86fa9482429cb07d5ef2136f750, type: 2}
+  Ins: {fileID: 151670, guid: fe7bd86fa9482429cb07d5ef2136f750, type: 2}
 --- !u!212 &21284370
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -214,7 +214,11 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: Ins
       value: 
-      objectReference: {fileID: 165584, guid: fe7bd86fa9482429cb07d5ef2136f750, type: 2}
+      objectReference: {fileID: 151670, guid: fe7bd86fa9482429cb07d5ef2136f750, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_LocalPosition.z
+      value: -10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 141326}
