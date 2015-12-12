@@ -14,6 +14,12 @@ public class PointCounter : MonoBehaviour {
         uiString.text = "X " + this.points;
     }
 
+    public void removePoint()
+    {
+        this.points -= 1;
+        uiString.text = "X " + this.points;
+    }
+
     public int getPoints()
     {
         return this.points;
