@@ -10,7 +10,9 @@ public class Point : MonoBehaviour {
         this.counter = GameObject.Find("PointCounter").GetComponent<PointCounter>();
         Debug.Log(counter);
         Debug.Log("Point created with counter", this.counter);
-	}
+        this.GetComponent<SpriteRenderer>().enabled = true;
+        this.GetComponent<Collider2D>().enabled = true;
+    }
 
 	
 	// Update is called once per frame
@@ -25,6 +27,7 @@ public class Point : MonoBehaviour {
             counter.addPoint();
             this.GetComponent<AudioSource>().Play();
             this.Disable();
+            other.GetComponent<Shark>().addEaten(gameObject);
             other.GetComponent<SizeChanger>().Increment();
         }
     }
@@ -34,4 +37,5 @@ public class Point : MonoBehaviour {
         this.GetComponent<SpriteRenderer>().enabled = false;
         this.GetComponent<Collider2D>().enabled = false;
     }
+
 }

@@ -4,20 +4,27 @@ using System.Collections;
 public class Shark : MonoBehaviour
 {
     private Rigidbody2D rb;
-
     Animator animator;
-
     public float maxSpeedV = 5f;
     private bool facingRight = true;
     public int jumpTokens = 2;
     public enum states { Walking, Idle, Jumping, Diving }
     public states state;
+    public Rigidbody2D projectile;
+    public float shootCooldown = 0.25f;
+    public Transform shootFrom;
+    private float lastShot;
+    private Stack eaten;
+    private PointCounter counter;
 
 
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        lastShot = Time.time;
+        eaten = new Stack();
+        counter = GameObject.Find("PointCounter").GetComponent<PointCounter>();
     }
 
 
@@ -60,12 +67,18 @@ public class Shark : MonoBehaviour
             animator.speed = 1;
         }
 
+        if (Input.GetAxis("Fire") > 0)
+        {
+            Fire();
+        }
+
         GameObject redplants = GameObject.Find("Back_Plants");
-        float sx = Camera.main.transform.position.x / 8;
-        Vector3 vec = new Vector3(sx, 0, 0);
-        redplants.transform.position = vec;
-
-
+        if (redplants != null) {
+            float sx = Camera.main.transform.position.x / 8;
+            Vector3 vec = new Vector3(sx, 0, 0);
+            redplants.transform.position = vec;
+        }
+        
     }
 
     private void changeState(states newState)
@@ -119,13 +132,32 @@ public class Shark : MonoBehaviour
         Vector3 flipped = transform.localScale;
         flipped.x = flipped.x * -1;
         transform.localScale = flipped;
-
-
-        //Vector3 cameraFlipped = Camera.main.transform.localScale;
-        //cameraFlipped.x = cameraFlipped.x * -1;
-        //Camera.main.transform.localScale = cameraFlipped;
     }
 
+    public void Fire()
+    {
+        if (Time.time > lastShot + shootCooldown && eaten.Count > 0)
+        {
+            lastShot = Time.time;
+            GameObject projectileInner = (GameObject) eaten.Pop();
+            this.projectile.gameObject.GetComponent<ProjectileScript>().setInnerObject(projectileInner);
+            Rigidbody2D p = Instantiate(projectile, shootFrom.position, Quaternion.identity) as Rigidbody2D;
+            GetComponent<SizeChanger>().Decrement();
+            counter.removePoint();
+            if (facingRight) {
+                p.velocity = rb.velocity + new Vector2(20f, 0f);
+            } else
+            {
+                p.velocity = rb.velocity + new Vector2(-20f, 0f);
+            }
+                            
+        }
+    }
+
+    public void addEaten(GameObject obj)
+    {
+        eaten.Push(obj);
+    }
 
     void OnCollisionEnter2D(Collision2D col)
     {
