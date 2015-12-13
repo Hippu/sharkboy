@@ -1,16 +1,13 @@
 fileFormatVersion: 2
-guid: f22900486f46046b295bf21b01e2dacd
-timeCreated: 1449968789
+guid: 60407f56050191249baf98f6c7901704
+timeCreated: 1449962633
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: Hamberger_0
-    21300002: Hamberger_1
-    21300004: Hamberger_2
+  fileIDToRecycleName: {}
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
+    enableMipMap: 1
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -41,48 +38,18 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
-  spriteBorder: {x: 0, y: 0, z: 242, w: 0}
-  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 120
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites:
-    - name: Hamberger_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 123
-        height: 200
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Hamberger_1
-      rect:
-        serializedVersion: 2
-        x: 123
-        y: 0
-        width: 116
-        height: 200
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Hamberger_2
-      rect:
-        serializedVersion: 2
-        x: 239
-        y: 0
-        width: 121
-        height: 200
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+    sprites: []
   spritePackingTag: 
   userData: 
   assetBundleName: 
