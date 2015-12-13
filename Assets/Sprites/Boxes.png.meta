@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 963d42cf3f278474f9454cab96825a32
-timeCreated: 1449681942
+timeCreated: 1449966074
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -48,7 +48,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 15
+  spritePixelsToUnits: 80
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
@@ -59,38 +59,38 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 16
+        width: 125
+        height: 125
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Boxes_1
       rect:
         serializedVersion: 2
-        x: 20
+        x: 125
         y: 0
-        width: 16
-        height: 16
+        width: 125
+        height: 125
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Boxes_2
       rect:
         serializedVersion: 2
-        x: 39
+        x: 250
         y: 0
-        width: 16
-        height: 16
+        width: 125
+        height: 125
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Boxes_3
       rect:
         serializedVersion: 2
-        x: 58
+        x: 375
         y: 0
-        width: 16
-        height: 16
+        width: 125
+        height: 125
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
