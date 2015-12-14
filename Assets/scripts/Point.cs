@@ -28,7 +28,6 @@ public class Point : MonoBehaviour {
             this.GetComponent<AudioSource>().Play();
             this.Disable();
             other.GetComponent<Shark>().addEaten(gameObject);
-            other.GetComponent<SizeChanger>().Increment();
         }
     }
 

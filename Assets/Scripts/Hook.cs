@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Hook : MonoBehaviour {
-
+	private bool Untouched = true;
 	// Use this for initialization
 	void Start () {
 	
@@ -15,8 +15,12 @@ public class Hook : MonoBehaviour {
 	}
 	
 	void OnTriggerEnter2D (Collider2D trigger) {
-		if (trigger.tag == "Player"){
-			Application.LoadLevel("Lose");
+		if (Untouched){
+			if (trigger.tag == "Player"){
+				Untouched = false;
+				trigger.GetComponent<SizeChanger>().Decrement();
+				this.GetComponent<AudioSource>().Play();
+			}
 		}
 	}
 }

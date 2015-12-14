@@ -142,7 +142,6 @@ public class Shark : MonoBehaviour
             GameObject projectileInner = (GameObject) eaten.Pop();
             this.projectile.gameObject.GetComponent<ProjectileScript>().setInnerObject(projectileInner);
             Rigidbody2D p = Instantiate(projectile, shootFrom.position, Quaternion.identity) as Rigidbody2D;
-            GetComponent<SizeChanger>().Decrement();
             counter.removePoint();
             if (facingRight) {
                 p.velocity = rb.velocity + new Vector2(20f, 0f);
