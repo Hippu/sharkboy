@@ -1,0 +1,319 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &155518
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 428898}
+  - 212: {fileID: 21296882}
+  - 50: {fileID: 5080574}
+  - 60: {fileID: 6027182}
+  - 114: {fileID: 11400108}
+  - 82: {fileID: 8213038}
+  m_Layer: 0
+  m_Name: Monster
+  m_TagString: Enemy
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &428898
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155518}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!50 &5080574
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155518}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!60 &6027182
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155518}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 2.1, y: -1.86}
+      - {x: 2.1599998, y: -1.8}
+      - {x: 2.18, y: -1.7199999}
+      - {x: 1.9799999, y: -1.5999999}
+      - {x: 1.7199999, y: -1.56}
+      - {x: 1.18, y: -1.38}
+      - {x: 0.82, y: -1.4}
+      - {x: 0.5, y: -1.28}
+      - {x: 0.48, y: -1.14}
+      - {x: 0.24, y: -1.18}
+      - {x: 0.06, y: -0.79999995}
+      - {x: 0.04, y: -0.56}
+      - {x: 0.16, y: -0.34}
+      - {x: 0.26, y: -0.34}
+      - {x: 0.32, y: -0.24}
+      - {x: 0.65999997, y: 0.24}
+      - {x: 0.78, y: 0.28}
+      - {x: 1.04, y: 0.42}
+      - {x: 1.4, y: 0.65999997}
+      - {x: 1.5799999, y: 0.9}
+      - {x: 1.66, y: 1.16}
+      - {x: 1.92, y: 1.18}
+      - {x: 1.9799999, y: 1}
+      - {x: 2.06, y: 0.68}
+      - {x: 2.1399999, y: 0.76}
+      - {x: 2.22, y: 0.9}
+      - {x: 2.22, y: 1.12}
+      - {x: 2.04, y: 1.36}
+      - {x: 1.8, y: 1.4599999}
+      - {x: 1.3, y: 1.88}
+      - {x: 1.06, y: 1.9399999}
+      - {x: 1.06, y: 2.1599998}
+      - {x: 0.94, y: 2.28}
+      - {x: 0.71999997, y: 2.46}
+      - {x: 0.62, y: 2.52}
+      - {x: 0.35999998, y: 2.52}
+      - {x: 0.099999994, y: 2.48}
+      - {x: -0.14, y: 2.3799999}
+      - {x: -0.28, y: 2.32}
+      - {x: -0.52, y: 2.1599998}
+      - {x: -0.64, y: 2.02}
+      - {x: -0.9, y: 1.56}
+      - {x: -1.1, y: 1.28}
+      - {x: -1.54, y: 0.96}
+      - {x: -1.54, y: 0.7}
+      - {x: -1.4399999, y: 0.42}
+      - {x: -1.56, y: 0.22}
+      - {x: -1.38, y: 0.04}
+      - {x: -0.82, y: 0.38}
+      - {x: -0.16, y: 0.74}
+      - {x: 0.22, y: 0.88}
+      - {x: 0.12, y: 0.76}
+      - {x: 0.099999994, y: 0.71999997}
+      - {x: 0.22, y: 0.64}
+      - {x: 0.02, y: 0.56}
+      - {x: -0.52, y: 0.17999999}
+      - {x: -0.64, y: 0.04}
+      - {x: -0.82, y: -0.28}
+      - {x: -0.85999995, y: -0.64}
+      - {x: -1, y: -0.97999996}
+      - {x: -1.02, y: -1.16}
+      - {x: -1.16, y: -1.24}
+      - {x: -1.28, y: -1.42}
+      - {x: -1.48, y: -1.54}
+      - {x: -1.92, y: -1.54}
+      - {x: -2.24, y: -1.6999999}
+      - {x: -2.24, y: -1.8199999}
+      - {x: -2.1599998, y: -1.86}
+      - {x: -1.78, y: -1.9599999}
+      - {x: -1.56, y: -2}
+      - {x: -0.94, y: -2.02}
+      - {x: -0.56, y: -2.1599998}
+      - {x: -0.08, y: -2.22}
+      - {x: 0.88, y: -2.22}
+      - {x: 1.3, y: -2.1399999}
+      - {x: 1.4, y: -2.1}
+      - {x: 1.6999999, y: -2.02}
+    - - {x: 0.44, y: -1.14}
+      - {x: 0.5, y: -1.12}
+      - {x: 0.5, y: -1.06}
+      - {x: 0.44, y: -1.04}
+      - {x: 0.39999998, y: -1.0799999}
+    - - {x: -0.06, y: 0.62}
+      - {x: -0.02, y: 0.58}
+      - {x: 0.04, y: 0.59999996}
+      - {x: 0.06, y: 0.68}
+      - {x: 0.02, y: 0.71999997}
+      - {x: -0.04, y: 0.7}
+--- !u!82 &8213038
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155518}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f987bf977ebf84ad690e1a483f45e064, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!114 &11400108
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7457f1c843da404da0a8e11a3d74935, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyHealth: 100
+  EnemyBullet: {fileID: 116926, guid: fccb79d8cc6d04a5e80100a65d8c7d13, type: 2}
+  EnemyBulletSpeed: 5
+  EnemyDamage: 15
+--- !u!212 &21296882
+SpriteRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155518}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_ReflectionProbeUsage: 0
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: d8be0a7355c1f4929b7eadebfa554acc, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: EnemyBullet
+      value: 
+      objectReference: {fileID: 116926, guid: fccb79d8cc6d04a5e80100a65d8c7d13, type: 2}
+    - target: {fileID: 0}
+      propertyPath: panLevelCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: f987bf977ebf84ad690e1a483f45e064, type: 3}
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 155518}
+  m_IsPrefabParent: 1
