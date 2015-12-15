@@ -26,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 186828}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.271171, y: -0.916954, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -75,7 +75,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   innerObject: {fileID: 0}
   BulletDamage: 20
-  Bullets: {fileID: 8300000, guid: 63257edb8b2654b01829c5976bffc806, type: 3}
+  Bullets: {fileID: 8300000, guid: 380fb682cc3a448f59e5d2945d4777db, type: 3}
 --- !u!212 &21286994
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -124,7 +124,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: Bullets
       value: 
-      objectReference: {fileID: 8300000, guid: 63257edb8b2654b01829c5976bffc806, type: 3}
+      objectReference: {fileID: 8300000, guid: 380fb682cc3a448f59e5d2945d4777db, type: 3}
     - target: {fileID: 0}
       propertyPath: m_AngularDrag
       value: 0
