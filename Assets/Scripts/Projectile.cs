@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ProjectileScript : MonoBehaviour {
+public class Projectile : MonoBehaviour {
 
     private Rigidbody2D rb;
     public GameObject innerObject;
+	public float BulletDamage = 50f;
+	public AudioClip Bullets;
 
 	// Use this for initialization
 	void Start () {
@@ -27,4 +29,12 @@ public class ProjectileScript : MonoBehaviour {
         this.transform.localScale = obj.GetComponent<Transform>().localScale;
     }
 
+	public void BulletDestroy() {
+		Destroy(gameObject);
+		AudioSource.PlayClipAtPoint(Bullets,transform.position,1f);
+	}
+	
+	public float GetBulletDamage (){
+		return (BulletDamage);
+	}
 }

@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Shark : MonoBehaviour
-{
+public class Shark : MonoBehaviour {
+	
     private Rigidbody2D rb;
     Animator animator;
     public float maxSpeedV = 5f;
@@ -16,7 +16,7 @@ public class Shark : MonoBehaviour
     private float lastShot;
     private Stack eaten;
     private PointCounter counter;
-
+	public float SharkHealth = 50;
 
     void Start()
     {
@@ -140,9 +140,8 @@ public class Shark : MonoBehaviour
         {
             lastShot = Time.time;
             GameObject projectileInner = (GameObject) eaten.Pop();
-            this.projectile.gameObject.GetComponent<ProjectileScript>().setInnerObject(projectileInner);
+            this.projectile.gameObject.GetComponent<Projectile>().setInnerObject(projectileInner);
             Rigidbody2D p = Instantiate(projectile, shootFrom.position, Quaternion.identity) as Rigidbody2D;
-            GetComponent<SizeChanger>().Decrement();
             counter.removePoint();
             if (facingRight) {
                 p.velocity = rb.velocity + new Vector2(20f, 0f);
@@ -176,5 +175,20 @@ public class Shark : MonoBehaviour
         }
     }
 
+
+
+	void OnTriggerEnter2D (Collider2D tri){
+		WaterBall WaterBall = tri.gameObject.GetComponent<WaterBall>();
+		if (WaterBall){
+			SharkHealth -= WaterBall.EnemyBulletDamage;
+		}
+		Monster Monster = tri.gameObject.GetComponent<Monster>();
+		if (Monster){
+			SharkHealth -= Monster.EnemyDamage;
+		}
+		if (SharkHealth <= 0f){
+			Application.LoadLevel("Lose");
+		}
+	}
 
 }

@@ -8,6 +8,9 @@ TagManager:
   - sand
   - squid
   - Hook
+  - EnemyBullet
+  - Bullet
+  - Enemy
   layers:
   - Default
   - TransparentFX
