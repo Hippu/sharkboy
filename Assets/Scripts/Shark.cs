@@ -17,6 +17,7 @@ public class Shark : MonoBehaviour {
     private Stack eaten;
     private PointCounter counter;
 	public float SharkHealth = 50;
+	public AudioClip EnemyCollision;
 
     void Start()
     {
@@ -185,6 +186,7 @@ public class Shark : MonoBehaviour {
 		Monster Monster = tri.gameObject.GetComponent<Monster>();
 		if (Monster){
 			SharkHealth -= Monster.EnemyDamage;
+			AudioSource.PlayClipAtPoint(EnemyCollision,this.transform.position,1f);
 		}
 		if (SharkHealth <= 0f){
 			Application.LoadLevel("Lose");
