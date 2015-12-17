@@ -9,6 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 412140}
   - 61: {fileID: 6122420}
+  - 114: {fileID: 11450398}
   m_Layer: 0
   m_Name: Wall
   m_TagString: Untagged
@@ -80,7 +81,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 129762}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 114.809998, y: 3.25, z: 0}
+  m_LocalPosition: {x: 124.400002, y: .919533253, z: 0}
   m_LocalScale: {x: 1.94696248, y: 1.94696343, z: 1.94696343}
   m_Children:
   - {fileID: 412140}
@@ -113,6 +114,20 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
+--- !u!114 &11450398
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 113348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3d376058a975c548a40daab2bf52c5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sign: {fileID: 0}
+  foodRequired: 2
+  nextLevel: Start
 --- !u!114 &11460948
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -125,7 +140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sign: {fileID: 0}
-  foodRequired: 2
+  foodRequired: 15
   nextLevel: TestLevel3
 --- !u!212 &21209126
 SpriteRenderer:

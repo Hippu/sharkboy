@@ -9,16 +9,46 @@ public class Monster : MonoBehaviour {
 	public AudioClip EnemyExplosion;
 	public GameObject Shell;
     private GameObject player;
+    public bool patrols = false;
+    public float patrolRadius;
+    public float speed;
+    private float minX;
+    private float maxX;
+    private bool movingRight = true;
+    
+
 	// Use this for initialization
 	void Start () {
-		InvokeRepeating ("EnemyFire", 0.0000001f,1f);
+        if (EnemyBullet != null) {
+            InvokeRepeating("EnemyFire", 0.0000001f, 1f);
+        }
         player = GameObject.FindGameObjectWithTag("Player");
-	}
+        minX = transform.position.x - patrolRadius;
+        maxX = transform.position.x + patrolRadius;
+    }
 	
 	// Update is called once per frame
 	void Update () {
+        if (patrols) { PatrolUpdate(); };
 		
 	}
+
+    void PatrolUpdate()
+    {
+        if (movingRight && transform.position.x < maxX)
+        {
+            transform.position = new Vector3(transform.position.x + (speed * Time.deltaTime), transform.position.y);
+        }
+        else if (!movingRight && transform.position.x > minX)
+        {
+            transform.position = new Vector3(transform.position.x - (speed * Time.deltaTime), transform.position.y);
+        }
+        else
+        {
+            movingRight = !movingRight;
+            transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y);
+        }
+    }
 
 	void EnemyFire (){
         if (Vector3.Distance(player.transform.position, transform.position) < 15) {
