@@ -8,9 +8,11 @@ public class Monster : MonoBehaviour {
 	public float EnemyDamage = 15f;
 	public AudioClip EnemyExplosion;
 	public GameObject Shell;
+    private GameObject player;
 	// Use this for initialization
 	void Start () {
 		InvokeRepeating ("EnemyFire", 0.0000001f,1f);
+        player = GameObject.FindGameObjectWithTag("Player");
 	}
 	
 	// Update is called once per frame
@@ -19,9 +21,11 @@ public class Monster : MonoBehaviour {
 	}
 
 	void EnemyFire (){
-		GameObject waterball = Instantiate(EnemyBullet,this.transform.position,Quaternion.identity) as GameObject;
-		waterball.GetComponent<Rigidbody2D>().velocity = new Vector3 (-EnemyBulletSpeed,Random.Range(-2f,2f),0f);
-		this.GetComponent<AudioSource>().Play();
+        if (Vector3.Distance(player.transform.position, transform.position) < 15) {
+            GameObject waterball = Instantiate(EnemyBullet, this.transform.position, Quaternion.identity) as GameObject;
+            waterball.GetComponent<Rigidbody2D>().velocity = new Vector3(-EnemyBulletSpeed, Random.Range(-2f, 2f), 0f);
+            this.GetComponent<AudioSource>().Play();
+        }	
 	}
 
 	void OnTriggerEnter2D (Collider2D Trigger) {
