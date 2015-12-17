@@ -6395,6 +6395,14 @@ Prefab:
       propertyPath: lookAheadFactor
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 8286736, guid: 97c8dcf303b1e8543a7957080b058783, type: 2}
+      propertyPath: panLevelCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8286736, guid: 97c8dcf303b1e8543a7957080b058783, type: 2}
+      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 97c8dcf303b1e8543a7957080b058783, type: 2}
   m_IsPrefabParent: 0
