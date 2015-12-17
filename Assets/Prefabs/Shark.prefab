@@ -358,10 +358,11 @@ MonoBehaviour:
   jumpTokens: 2
   state: 0
   projectile: {fileID: 5030646, guid: cf884138d186b2e49a6e97572b3e9d79, type: 2}
-  shootCooldown: 1
+  shootCooldown: .5
   shootFrom: {fileID: 409860}
   SharkHealth: 50
   EnemyCollision: {fileID: 8300000, guid: 7f62467863bb04926ae3687217896b2c, type: 3}
+  projectileSpeed: 15
 --- !u!114 &11498352
 MonoBehaviour:
   m_ObjectHideFlags: 1
