@@ -11,6 +11,7 @@ public class LevelManager : MonoBehaviour {
 		Debug.Log ("I want to quit!");
 		Application.Quit ();
 	}
-
-	
+	public void LoadNextLevel (){
+		Application.LoadLevel (Application.loadedLevel + 1);
+	}
 }

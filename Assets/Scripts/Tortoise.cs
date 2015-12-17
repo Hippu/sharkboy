@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Monster : MonoBehaviour {
+public class Tortoise : MonoBehaviour {
 	public float EnemyHealth = 100;
 	public GameObject EnemyBullet;
 	public float EnemyBulletSpeed = 5f;
@@ -31,10 +31,9 @@ public class Monster : MonoBehaviour {
 			EnemyHealth -= Projectile.BulletDamage;
 		}
 		if (EnemyHealth<= 0f){
-			Instantiate(Shell,this.transform.position,Quaternion.identity);
 			Destroy(gameObject);
 			AudioSource.PlayClipAtPoint(EnemyExplosion,this.transform.position,0.5f);
-
+			Instantiate(Shell,this.transform.position,Quaternion.identity);
 		}
 	}
 }
