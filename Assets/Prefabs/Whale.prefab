@@ -25,6 +25,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 414918}
   - 61: {fileID: 6163318}
+  - 114: {fileID: 11460948}
   m_Layer: 0
   m_Name: Mouth
   m_TagString: Untagged
@@ -67,7 +68,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 120288}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.82000017, y: -.800000012, z: 0}
+  m_LocalPosition: {x: -5.78000021, y: -1.04999995, z: 0}
   m_LocalScale: {x: 1, y: 2.13750792, z: 1}
   m_Children: []
   m_Father: {fileID: 474708}
@@ -79,8 +80,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 129762}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 111.360001, y: 2.78999996, z: -39.4296875}
-  m_LocalScale: {x: 1.59418404, y: 1.59418464, z: 1.59418464}
+  m_LocalPosition: {x: 114.809998, y: 3.25, z: 0}
+  m_LocalScale: {x: 1.94696248, y: 1.94696343, z: 1.94696343}
   m_Children:
   - {fileID: 412140}
   - {fileID: 414918}
@@ -107,11 +108,25 @@ BoxCollider2D:
   m_GameObject: {fileID: 120288}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
+--- !u!114 &11460948
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 120288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3d376058a975c548a40daab2bf52c5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sign: {fileID: 0}
+  foodRequired: 2
+  nextLevel: TestLevel3
 --- !u!212 &21209126
 SpriteRenderer:
   m_ObjectHideFlags: 1

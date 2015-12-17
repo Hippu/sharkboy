@@ -40,8 +40,8 @@ Rigidbody2D:
   m_GameObject: {fileID: 186828}
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -98,7 +98,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6c58fa2359d392e44a70246fa4b541e1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ac3cf2d2f1b5ebf4ea8fa4729ecbad10, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
@@ -121,11 +121,11 @@ Prefab:
       objectReference: {fileID: 8300000, guid: 380fb682cc3a448f59e5d2945d4777db, type: 3}
     - target: {fileID: 0}
       propertyPath: m_AngularDrag
-      value: 0
+      value: .0500000007
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_GravityScale
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

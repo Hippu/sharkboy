@@ -11,7 +11,7 @@ public class Whale : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         Debug.Log("Behaviour started");
-	    
+        setSignText();
 	}
 	
 	// Update is called once per frame
@@ -24,6 +24,7 @@ public class Whale : MonoBehaviour {
         if (other.gameObject.tag != "Player")
         {
             this.foodEaten += 1;
+            setSignText();
             Destroy(other.gameObject);
             Debug.Log("Whale ate something");
             if (foodEaten >= foodRequired)
@@ -31,5 +32,10 @@ public class Whale : MonoBehaviour {
                 Application.LoadLevel(nextLevel);
             }
         }
+    }
+
+    void setSignText()
+    {
+        sign.GetComponentInChildren<TextMesh>().text = (foodRequired - foodEaten).ToString();
     }
 }

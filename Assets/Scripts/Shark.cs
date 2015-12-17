@@ -18,6 +18,7 @@ public class Shark : MonoBehaviour {
     private PointCounter counter;
 	public float SharkHealth = 50;
 	public AudioClip EnemyCollision;
+    public float projectileSpeed;
 
     void Start()
     {
@@ -144,11 +145,12 @@ public class Shark : MonoBehaviour {
             this.projectile.gameObject.GetComponent<Projectile>().setInnerObject(projectileInner);
             Rigidbody2D p = Instantiate(projectile, shootFrom.position, Quaternion.identity) as Rigidbody2D;
             counter.removePoint();
+            GetComponent<SizeChanger>().Decrement();
             if (facingRight) {
-                p.velocity = rb.velocity + new Vector2(20f, 0f);
+                p.velocity = rb.velocity + new Vector2(projectileSpeed, 0f);
             } else
             {
-                p.velocity = rb.velocity + new Vector2(-20f, 0f);
+                p.velocity = rb.velocity + new Vector2(-projectileSpeed, 0f);
             }
                             
         }
@@ -157,6 +159,7 @@ public class Shark : MonoBehaviour {
     public void addEaten(GameObject obj)
     {
         eaten.Push(obj);
+        GetComponent<SizeChanger>().Increment();
     }
 
     void OnCollisionEnter2D(Collision2D col)
