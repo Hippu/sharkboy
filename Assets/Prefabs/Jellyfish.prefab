@@ -14,7 +14,7 @@ GameObject:
   - 60: {fileID: 6084650}
   - 50: {fileID: 5028770}
   m_Layer: 0
-  m_Name: Monster_02
+  m_Name: Jellyfish
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -184,6 +184,7 @@ MonoBehaviour:
   EnemyBulletSpeed: 5
   EnemyDamage: 5
   EnemyExplosion: {fileID: 0}
+  Shell: {fileID: 0}
 --- !u!212 &21280504
 SpriteRenderer:
   m_ObjectHideFlags: 1
