@@ -10,6 +10,7 @@ public class Whale : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        Debug.Log("Behaviour started");
 	    
 	}
 	
@@ -18,12 +19,13 @@ public class Whale : MonoBehaviour {
 	
 	}
 
-    void onTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag != "player")
+        if (other.gameObject.tag != "Player")
         {
             this.foodEaten += 1;
             Destroy(other.gameObject);
+            Debug.Log("Whale ate something");
             if (foodEaten >= foodRequired)
             {
                 Application.LoadLevel(nextLevel);

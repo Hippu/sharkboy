@@ -8,8 +8,6 @@ public class Point : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         this.counter = GameObject.Find("PointCounter").GetComponent<PointCounter>();
-        Debug.Log(counter);
-        Debug.Log("Point created with counter", this.counter);
         this.GetComponent<SpriteRenderer>().enabled = true;
         this.GetComponent<Collider2D>().enabled = true;
     }
